@@ -4,6 +4,7 @@ import { TelemetryService } from '../../../../../shared/src/telemetry/telemetryS
 import storage from '../../browser/storage'
 import { isInPage } from '../../context'
 import { logUserEvent } from '../backend/userEvents'
+import { sourcegraphUrl } from '../util/context'
 
 const uidKey = 'sourcegraphAnonymousUid'
 
@@ -68,7 +69,7 @@ export class EventLogger implements TelemetryService {
      */
     public logCodeIntelligenceEvent(event: GQL.UserEvent): void {
         this.getAnonUserID().then(
-            anonUserId => logUserEvent(event, anonUserId),
+            anonUserId => logUserEvent(event, anonUserId, sourcegraphUrl),
             () => {
                 /* noop */
             }

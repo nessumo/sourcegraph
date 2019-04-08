@@ -10,12 +10,6 @@ export let eventLogger = new EventLogger()
 export let sourcegraphUrl =
     window.localStorage.getItem('SOURCEGRAPH_URL') || window.SOURCEGRAPH_URL || DEFAULT_SOURCEGRAPH_URL
 
-interface UrlCache {
-    [key: string]: string
-}
-
-export const repoUrlCache: UrlCache = {}
-
 if (window.SG_ENV === 'EXTENSION') {
     storage.getSync(items => {
         sourcegraphUrl = items.sourcegraphURL
