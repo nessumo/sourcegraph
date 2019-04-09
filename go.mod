@@ -134,7 +134,7 @@ require (
 	github.com/xeipuuv/gojsonschema v0.0.0-20180816142147-da425ebb7609
 	github.com/xeonx/timeago v1.0.0-rc3
 	github.com/zenazn/goji v0.9.0 // indirect
-	go.opencensus.io v0.19.0 // indirect
+	go.opencensus.io v0.20.2 // indirect
 	go.uber.org/atomic v1.3.2 // indirect
 	golang.org/x/crypto v0.0.0-20190320223903-b7391e95e576
 	golang.org/x/net v0.0.0-20190322120337-addf6b3196f6
